@@ -1,6 +1,6 @@
 # Frontend Interview Notes
 
-An offline study guide for senior and principal engineering interviews, with a frontend focus. Includes 17 topics, code examples, full-text search, passage tags, and a guided learning path.
+An offline study guide for senior and principal engineering interviews, with a frontend focus. Includes 19 topics, code examples, full-text search, passage tags, and a guided learning path.
 
 Open `frontend_interview_notes.html` in a browser. No server or build step is required.
 

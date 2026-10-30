@@ -47,3 +47,5 @@ These user-requested instructions apply to the `frontend_interview_notes.html` i
 - Keep the primary sidebar focused on topic navigation: do not restore the Frontend Interview Notes brand title or Concepts, examples, and interview answers description.
 
 - Project root: `/Users/tduani/WebstormProjects/frontend-interview-notes`. Open `frontend_interview_notes.html` as the entry point. Historical snapshots are in `backups/`; edit the active guide only.
+
+- Node.js runtime has its own API implementation page; reference the existing browser event-loop foundation rather than duplicating it. Routing & Navigation follows application patterns and references canonical URL-state ownership. JavaScript mechanics owns property descriptors, coercion, iteration protocols, and module evaluation; TypeScript owns variance, overloads, type transformations, and reusable component typing.

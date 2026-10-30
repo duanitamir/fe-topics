@@ -74,6 +74,11 @@
         "file": "application-patterns.html",
         "title": "Application Design Patterns",
         "summary": "Strategy, adapters, dependency injection, facades, ports, BFFs, incremental migrations, and failure containment."
+      },
+      {
+        "file": "routing-navigation.html",
+        "title": "Routing & Navigation",
+        "summary": "Navigation models, history, nested routes, data loading, focus, scroll restoration, and unsaved changes."
       }
     ]
   },
@@ -81,6 +86,11 @@
     "group": "API implementation",
     "description": "Build explicit endpoint contracts and choose the right client-facing API model.",
     "topics": [
+      {
+        "file": "node-runtime.html",
+        "title": "Node.js Runtime & Server Execution",
+        "summary": "libuv, worker threads, streams, backpressure, graceful shutdown, and request context."
+      },
       {
         "file": "backend-api.html",
         "title": "Backend & API Fundamentals",

@@ -45,11 +45,11 @@ for page in sorted(ROOT.glob('*.html')):
         global count
         raw=text_content(match['body'])
         language,label=language_for(page.name,raw)
-        if page.stem in {'javascript-mechanics','async-programming','typescript','http-networking','build-tooling','accessibility','backend-api','graphql'}:
+        if page.stem in {'javascript-mechanics','async-programming','typescript','http-networking','build-tooling','accessibility','backend-api','graphql','node-runtime','routing-navigation'}:
             declared=re.search(r'class="language-([^"]+)"', match['code_attrs'])
             assert declared, (page.name, 'Declare each example language')
             language=declared[1]
-            label={'javascript':'JavaScript','typescript':'TypeScript','jsx':'React · JSX','graphql':'GraphQL','sql':'SQL','json':'JSON','http':'HTTP response headers','html':'HTML'}[language]
+            label={'javascript':'JavaScript','typescript':'TypeScript','jsx':'React · JSX','tsx':'React · TSX','graphql':'GraphQL','sql':'SQL','json':'JSON','http':'HTTP response headers','html':'HTML'}[language]
         lexer=HeaderLexer(ensurenl=False,stripnl=False) if language=='http' else get_lexer_by_name(language,ensurenl=False,stripnl=False)
         colored=escape(raw) if language=='text' else highlight(raw,lexer,formatter)
         if text_content(colored)==raw+'\n': colored=colored[:-1]

@@ -974,6 +974,139 @@
         "api-integration",
         "http"
       ]
+    },
+    "js-descriptors-definition": {
+      "tags": [
+        "javascript"
+      ]
+    },
+    "js-coercion-definition": {
+      "tags": [
+        "javascript"
+      ]
+    },
+    "js-iteration-definition": {
+      "tags": [
+        "javascript",
+        "resource-lifecycle"
+      ]
+    },
+    "js-module-execution-definition": {
+      "tags": [
+        "javascript",
+        "tooling"
+      ]
+    },
+    "ts-variance-definition": {
+      "tags": [
+        "typescript",
+        "architecture"
+      ]
+    },
+    "ts-overloads-definition": {
+      "tags": [
+        "typescript"
+      ]
+    },
+    "ts-type-transformations-definition": {
+      "tags": [
+        "typescript"
+      ]
+    },
+    "ts-react-components-definition": {
+      "tags": [
+        "typescript",
+        "react"
+      ]
+    },
+    "node-execution-definition": {
+      "tags": [
+        "javascript",
+        "concurrency",
+        "performance"
+      ]
+    },
+    "node-libuv-definition": {
+      "tags": [
+        "concurrency",
+        "performance"
+      ]
+    },
+    "node-workers-definition": {
+      "tags": [
+        "javascript",
+        "concurrency",
+        "resource-lifecycle"
+      ]
+    },
+    "node-streams-definition": {
+      "tags": [
+        "resource-lifecycle",
+        "performance"
+      ]
+    },
+    "node-shutdown-definition": {
+      "tags": [
+        "resilience",
+        "resource-lifecycle"
+      ]
+    },
+    "node-request-context-definition": {
+      "tags": [
+        "javascript",
+        "resource-lifecycle"
+      ]
+    },
+    "node-review-definition": {
+      "tags": [
+        "performance",
+        "resilience"
+      ]
+    },
+    "routing-model-definition": {
+      "tags": [
+        "browser",
+        "architecture"
+      ]
+    },
+    "routing-history-definition": {
+      "tags": [
+        "browser",
+        "state-management"
+      ]
+    },
+    "routing-boundaries-definition": {
+      "tags": [
+        "react",
+        "architecture",
+        "resilience"
+      ]
+    },
+    "routing-data-definition": {
+      "tags": [
+        "api-integration",
+        "state-management",
+        "performance"
+      ]
+    },
+    "routing-accessibility-definition": {
+      "tags": [
+        "accessibility",
+        "browser"
+      ]
+    },
+    "routing-unsaved-definition": {
+      "tags": [
+        "forms",
+        "resource-lifecycle",
+        "resilience"
+      ]
+    },
+    "routing-review-definition": {
+      "tags": [
+        "browser",
+        "architecture"
+      ]
     }
   }
 }
