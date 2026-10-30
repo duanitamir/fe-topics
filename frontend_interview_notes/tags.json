@@ -1,0 +1,979 @@
+{
+  "tags": {
+    "design-pattern": "Design pattern",
+    "react": "React",
+    "browser": "Browser",
+    "http": "HTTP",
+    "state-management": "State management",
+    "accessibility": "Accessibility",
+    "security": "Security",
+    "performance": "Performance",
+    "concurrency": "Concurrency",
+    "resilience": "Resilience",
+    "resource-lifecycle": "Resource lifecycle",
+    "api-integration": "API integration",
+    "architecture": "Architecture",
+    "forms": "Forms",
+    "rendering": "Rendering",
+    "storage": "Storage",
+    "javascript": "JavaScript",
+    "typescript": "TypeScript",
+    "graphql": "GraphQL",
+    "tooling": "Tooling"
+  },
+  "passages": {
+    "security-token-storage": {
+      "tags": [
+        "security",
+        "storage"
+      ]
+    },
+    "security-refresh-rotation": {
+      "tags": [
+        "security",
+        "concurrency"
+      ]
+    },
+    "security-logout": {
+      "tags": [
+        "security",
+        "resource-lifecycle"
+      ]
+    },
+    "security-xss": {
+      "tags": [
+        "security",
+        "browser"
+      ]
+    },
+    "security-csrf": {
+      "tags": [
+        "security",
+        "browser"
+      ]
+    },
+    "search-b4926080257c": {
+      "tags": [
+        "security",
+        "browser"
+      ]
+    },
+    "search-be1ae355109f": {
+      "tags": [
+        "security",
+        "browser"
+      ]
+    },
+    "search-2cc493d4ad31": {
+      "tags": [
+        "security",
+        "api-integration"
+      ]
+    },
+    "react-identity-keys": {
+      "tags": [
+        "react",
+        "state-management"
+      ]
+    },
+    "react-batching": {
+      "tags": [
+        "react",
+        "concurrency"
+      ]
+    },
+    "react-concurrent": {
+      "tags": [
+        "react",
+        "concurrency"
+      ]
+    },
+    "search-0dedd61819ac": {
+      "tags": [
+        "react",
+        "rendering"
+      ]
+    },
+    "search-3a4bd5997af9": {
+      "tags": [
+        "react",
+        "rendering"
+      ]
+    },
+    "search-5a91cb115836": {
+      "tags": [
+        "react",
+        "rendering"
+      ]
+    },
+    "search-1eaae7bfbaa2": {
+      "tags": [
+        "react",
+        "api-integration"
+      ]
+    },
+    "search-f5a8b68851d2": {
+      "tags": [
+        "react",
+        "browser"
+      ]
+    },
+    "state-message-parts": {
+      "tags": [
+        "state-management",
+        "architecture"
+      ]
+    },
+    "state-message-example": {
+      "tags": [
+        "state-management",
+        "architecture"
+      ]
+    },
+    "context-machines": {
+      "tags": [
+        "design-pattern",
+        "state-management"
+      ]
+    },
+    "state-state-pattern": {
+      "tags": [
+        "design-pattern",
+        "state-management"
+      ]
+    },
+    "context-reducer": {
+      "tags": [
+        "react",
+        "state-management"
+      ]
+    },
+    "context-propagation": {
+      "tags": [
+        "react",
+        "performance",
+        "state-management"
+      ]
+    },
+    "context-selectors": {
+      "tags": [
+        "react",
+        "performance",
+        "state-management"
+      ]
+    },
+    "state-query-lifecycle": {
+      "tags": [
+        "state-management",
+        "api-integration"
+      ]
+    },
+    "state-implementation": {
+      "tags": [
+        "state-management",
+        "api-integration"
+      ]
+    },
+    "state-form-drafts": {
+      "tags": [
+        "state-management",
+        "forms"
+      ]
+    },
+    "state-concurrent-mutations": {
+      "tags": [
+        "concurrency",
+        "state-management"
+      ]
+    },
+    "state-occ-choice": {
+      "tags": [
+        "design-pattern",
+        "concurrency",
+        "api-integration"
+      ]
+    },
+    "events-propagation": {
+      "tags": [
+        "browser"
+      ]
+    },
+    "search-7f59522e66aa": {
+      "tags": [
+        "browser"
+      ]
+    },
+    "search-e46bd5b35a98": {
+      "tags": [
+        "browser"
+      ]
+    },
+    "events-resource-pattern": {
+      "tags": [
+        "design-pattern",
+        "resource-lifecycle"
+      ]
+    },
+    "hook-use-state-title": {
+      "tags": [
+        "react",
+        "state-management"
+      ]
+    },
+    "hook-use-reducer-title": {
+      "tags": [
+        "react",
+        "state-management"
+      ]
+    },
+    "hook-use-context-title": {
+      "tags": [
+        "react",
+        "state-management"
+      ]
+    },
+    "hook-use-ref-title": {
+      "tags": [
+        "react",
+        "resource-lifecycle"
+      ]
+    },
+    "hook-use-imperative-handle-title": {
+      "tags": [
+        "react",
+        "resource-lifecycle"
+      ]
+    },
+    "hook-use-effect-title": {
+      "tags": [
+        "react",
+        "resource-lifecycle"
+      ]
+    },
+    "hook-use-layout-effect-title": {
+      "tags": [
+        "react",
+        "resource-lifecycle"
+      ]
+    },
+    "hook-use-effect-event-title": {
+      "tags": [
+        "react",
+        "resource-lifecycle"
+      ]
+    },
+    "hook-use-insertion-effect-title": {
+      "tags": [
+        "react",
+        "resource-lifecycle"
+      ]
+    },
+    "hook-use-memo-title": {
+      "tags": [
+        "react",
+        "performance"
+      ]
+    },
+    "hook-use-callback-title": {
+      "tags": [
+        "react",
+        "performance"
+      ]
+    },
+    "hook-use-sync-external-store-title": {
+      "tags": [
+        "react",
+        "state-management",
+        "concurrency"
+      ]
+    },
+    "hook-use-transition-title": {
+      "tags": [
+        "react",
+        "concurrency",
+        "performance"
+      ]
+    },
+    "hook-use-deferred-value-title": {
+      "tags": [
+        "react",
+        "concurrency",
+        "performance"
+      ]
+    },
+    "hook-use-action-state-title": {
+      "tags": [
+        "react",
+        "forms"
+      ]
+    },
+    "hook-use-form-status-title": {
+      "tags": [
+        "react",
+        "forms"
+      ]
+    },
+    "hook-use-optimistic-title": {
+      "tags": [
+        "react",
+        "concurrency",
+        "state-management"
+      ]
+    },
+    "hook-use-title": {
+      "tags": [
+        "react",
+        "rendering"
+      ]
+    },
+    "hook-use-id-title": {
+      "tags": [
+        "react",
+        "accessibility"
+      ]
+    },
+    "hook-use-debug-value-title": {
+      "tags": [
+        "react"
+      ]
+    },
+    "hook-custom-hooks-title": {
+      "tags": [
+        "design-pattern",
+        "react"
+      ]
+    },
+    "hooks-custom-variants": {
+      "tags": [
+        "design-pattern",
+        "react"
+      ]
+    },
+    "api-storage-quotas": {
+      "tags": [
+        "browser",
+        "storage",
+        "resilience"
+      ]
+    },
+    "search-bb3f379f4348": {
+      "tags": [
+        "performance"
+      ]
+    },
+    "search-19d224a2371e": {
+      "tags": [
+        "performance"
+      ]
+    },
+    "search-c8e4e0cebea3": {
+      "tags": [
+        "performance"
+      ]
+    },
+    "performance-layout-thrashing": {
+      "tags": [
+        "browser",
+        "rendering",
+        "performance"
+      ]
+    },
+    "search-f621a6ca7c12": {
+      "tags": [
+        "performance"
+      ]
+    },
+    "search-8afa02f762ed": {
+      "tags": [
+        "performance"
+      ]
+    },
+    "search-c00eb918f6a6": {
+      "tags": [
+        "performance",
+        "api-integration",
+        "concurrency"
+      ]
+    },
+    "patterns-circuit-breaker": {
+      "tags": [
+        "design-pattern",
+        "resilience",
+        "api-integration"
+      ]
+    },
+    "patterns-bulkhead": {
+      "tags": [
+        "design-pattern",
+        "resilience",
+        "api-integration"
+      ]
+    },
+    "search-6d83b6ece1d4": {
+      "tags": [
+        "security",
+        "api-integration",
+        "http"
+      ]
+    },
+    "search-7aaf8435ef29": {
+      "tags": [
+        "security",
+        "api-integration",
+        "http"
+      ]
+    },
+    "search-12b987a9717a": {
+      "tags": [
+        "security",
+        "api-integration",
+        "http"
+      ]
+    },
+    "search-fa03782a56bf": {
+      "tags": [
+        "react",
+        "rendering",
+        "concurrency"
+      ]
+    },
+    "search-5ae4a429c1cf": {
+      "tags": [
+        "react",
+        "rendering"
+      ]
+    },
+    "search-b049da3753c7": {
+      "tags": [
+        "react",
+        "rendering"
+      ]
+    },
+    "search-551f7b0f8553": {
+      "tags": [
+        "design-pattern",
+        "react",
+        "resilience"
+      ]
+    },
+    "search-05a89860497e": {
+      "tags": [
+        "react",
+        "state-management"
+      ]
+    },
+    "search-95c1dd4374bd": {
+      "tags": [
+        "state-management",
+        "browser"
+      ]
+    },
+    "search-354a45d0b82a": {
+      "tags": [
+        "design-pattern",
+        "state-management",
+        "react"
+      ]
+    },
+    "search-a611de5360fb": {
+      "tags": [
+        "design-pattern",
+        "state-management",
+        "react"
+      ]
+    },
+    "search-2a684abeaf54": {
+      "tags": [
+        "state-management",
+        "concurrency",
+        "api-integration"
+      ]
+    },
+    "search-775c26429f3a": {
+      "tags": [
+        "state-management",
+        "api-integration",
+        "resilience"
+      ]
+    },
+    "search-86825dacc9d2": {
+      "tags": [
+        "browser",
+        "concurrency",
+        "performance"
+      ]
+    },
+    "search-05ffd1974766": {
+      "tags": [
+        "browser"
+      ]
+    },
+    "search-6180514d1871": {
+      "tags": [
+        "design-pattern",
+        "browser",
+        "resource-lifecycle"
+      ]
+    },
+    "search-a9c0e4bc845c": {
+      "tags": [
+        "browser"
+      ]
+    },
+    "search-6287dc1e24d1": {
+      "tags": [
+        "browser",
+        "concurrency",
+        "resource-lifecycle"
+      ]
+    },
+    "search-be90ba9111ad": {
+      "tags": [
+        "browser",
+        "performance",
+        "resource-lifecycle"
+      ]
+    },
+    "search-7cf1b8fad4c8": {
+      "tags": [
+        "browser",
+        "performance",
+        "resource-lifecycle"
+      ]
+    },
+    "search-d82aa677ac98": {
+      "tags": [
+        "browser",
+        "concurrency",
+        "performance"
+      ]
+    },
+    "search-46138658f264": {
+      "tags": [
+        "browser",
+        "storage"
+      ]
+    },
+    "search-51eeda065863": {
+      "tags": [
+        "browser",
+        "concurrency",
+        "storage"
+      ]
+    },
+    "search-91a8d0a3b576": {
+      "tags": [
+        "browser",
+        "rendering",
+        "performance"
+      ]
+    },
+    "search-b2259a0a285d": {
+      "tags": [
+        "react",
+        "performance"
+      ]
+    },
+    "search-cd1cd9096c3b": {
+      "tags": [
+        "design-pattern",
+        "architecture"
+      ]
+    },
+    "search-a51ad6b430c5": {
+      "tags": [
+        "design-pattern",
+        "architecture",
+        "api-integration"
+      ]
+    },
+    "search-3ee3567a59d8": {
+      "tags": [
+        "design-pattern",
+        "architecture"
+      ]
+    },
+    "search-4073d07054af": {
+      "tags": [
+        "design-pattern",
+        "architecture",
+        "api-integration"
+      ]
+    },
+    "search-4facf7101cfd": {
+      "tags": [
+        "design-pattern",
+        "architecture",
+        "api-integration"
+      ]
+    },
+    "search-571ed61971e1": {
+      "tags": [
+        "design-pattern",
+        "architecture",
+        "api-integration"
+      ]
+    },
+    "search-74eb67721de3": {
+      "tags": [
+        "design-pattern",
+        "architecture",
+        "resilience"
+      ]
+    },
+    "search-ba39dc4f80ba": {
+      "tags": [
+        "design-pattern",
+        "react"
+      ]
+    },
+    "search-e57acc8e768b": {
+      "tags": [
+        "design-pattern",
+        "react"
+      ]
+    },
+    "search-119494589f95": {
+      "tags": [
+        "design-pattern",
+        "react"
+      ]
+    },
+    "search-af159c031e7b": {
+      "tags": [
+        "react",
+        "accessibility"
+      ]
+    },
+    "search-3bec404c99e5": {
+      "tags": [
+        "design-pattern",
+        "browser",
+        "resilience"
+      ]
+    },
+    "search-bc10980d3dba": {
+      "tags": [
+        "react",
+        "forms",
+        "accessibility"
+      ]
+    },
+    "js-scope-definition": {
+      "tags": [
+        "javascript",
+        "resource-lifecycle"
+      ]
+    },
+    "js-this-definition": {
+      "tags": [
+        "javascript"
+      ]
+    },
+    "js-prototypes-definition": {
+      "tags": [
+        "javascript",
+        "architecture"
+      ]
+    },
+    "js-identity-definition": {
+      "tags": [
+        "javascript",
+        "state-management"
+      ]
+    },
+    "js-memory-definition": {
+      "tags": [
+        "javascript",
+        "performance",
+        "resource-lifecycle"
+      ]
+    },
+    "js-review-definition": {
+      "tags": [
+        "javascript"
+      ]
+    },
+    "async-promises-definition": {
+      "tags": [
+        "javascript",
+        "concurrency"
+      ]
+    },
+    "async-combinators-definition": {
+      "tags": [
+        "javascript",
+        "concurrency",
+        "resilience"
+      ]
+    },
+    "async-concurrency-definition": {
+      "tags": [
+        "javascript",
+        "concurrency",
+        "performance"
+      ]
+    },
+    "async-cancellation-definition": {
+      "tags": [
+        "concurrency",
+        "resilience",
+        "resource-lifecycle"
+      ]
+    },
+    "async-iteration-definition": {
+      "tags": [
+        "javascript",
+        "concurrency",
+        "resource-lifecycle"
+      ]
+    },
+    "async-review-definition": {
+      "tags": [
+        "javascript",
+        "concurrency"
+      ]
+    },
+    "ts-boundaries-definition": {
+      "tags": [
+        "typescript",
+        "security",
+        "api-integration"
+      ]
+    },
+    "ts-structural-definition": {
+      "tags": [
+        "typescript",
+        "architecture"
+      ]
+    },
+    "ts-unions-definition": {
+      "tags": [
+        "typescript",
+        "state-management"
+      ]
+    },
+    "ts-generics-definition": {
+      "tags": [
+        "typescript",
+        "architecture"
+      ]
+    },
+    "ts-utilities-definition": {
+      "tags": [
+        "typescript"
+      ]
+    },
+    "ts-review-definition": {
+      "tags": [
+        "typescript"
+      ]
+    },
+    "http-lifecycle-definition": {
+      "tags": [
+        "http",
+        "performance"
+      ]
+    },
+    "http-semantics-definition": {
+      "tags": [
+        "http",
+        "api-integration"
+      ]
+    },
+    "http-caching-definition": {
+      "tags": [
+        "http",
+        "performance",
+        "security"
+      ]
+    },
+    "http-transport-definition": {
+      "tags": [
+        "http",
+        "performance"
+      ]
+    },
+    "http-browser-boundaries-definition": {
+      "tags": [
+        "http",
+        "security",
+        "browser"
+      ]
+    },
+    "http-review-definition": {
+      "tags": [
+        "http"
+      ]
+    },
+    "build-modules-definition": {
+      "tags": [
+        "tooling",
+        "javascript"
+      ]
+    },
+    "build-pipeline-definition": {
+      "tags": [
+        "tooling",
+        "javascript"
+      ]
+    },
+    "build-tree-shaking-definition": {
+      "tags": [
+        "tooling",
+        "performance"
+      ]
+    },
+    "build-deployment-definition": {
+      "tags": [
+        "tooling",
+        "resilience",
+        "security"
+      ]
+    },
+    "build-review-definition": {
+      "tags": [
+        "tooling"
+      ]
+    },
+    "a11y-tree-definition": {
+      "tags": [
+        "accessibility",
+        "browser"
+      ]
+    },
+    "a11y-names-definition": {
+      "tags": [
+        "accessibility",
+        "forms"
+      ]
+    },
+    "a11y-focus-definition": {
+      "tags": [
+        "accessibility",
+        "browser"
+      ]
+    },
+    "a11y-announcements-definition": {
+      "tags": [
+        "accessibility",
+        "forms"
+      ]
+    },
+    "a11y-validation-definition": {
+      "tags": [
+        "accessibility"
+      ]
+    },
+    "a11y-review-definition": {
+      "tags": [
+        "accessibility"
+      ]
+    },
+    "api-request-lifecycle-definition": {
+      "tags": [
+        "api-integration",
+        "architecture",
+        "security"
+      ]
+    },
+    "api-validation-definition": {
+      "tags": [
+        "api-integration",
+        "security"
+      ]
+    },
+    "api-errors-definition": {
+      "tags": [
+        "api-integration",
+        "resilience",
+        "http"
+      ]
+    },
+    "api-pagination-definition": {
+      "tags": [
+        "api-integration",
+        "performance"
+      ]
+    },
+    "api-database-definition": {
+      "tags": [
+        "api-integration",
+        "concurrency",
+        "performance"
+      ]
+    },
+    "api-n-plus-one-definition": {
+      "tags": [
+        "api-integration",
+        "performance"
+      ]
+    },
+    "api-review-definition": {
+      "tags": [
+        "api-integration"
+      ]
+    },
+    "gql-purpose-definition": {
+      "tags": [
+        "graphql",
+        "api-integration",
+        "architecture"
+      ]
+    },
+    "gql-schema-definition": {
+      "tags": [
+        "graphql",
+        "api-integration"
+      ]
+    },
+    "gql-execution-definition": {
+      "tags": [
+        "graphql",
+        "api-integration",
+        "http"
+      ]
+    },
+    "gql-resolvers-definition": {
+      "tags": [
+        "graphql",
+        "performance",
+        "security"
+      ]
+    },
+    "gql-operations-definition": {
+      "tags": [
+        "graphql",
+        "state-management",
+        "concurrency"
+      ]
+    },
+    "gql-errors-definition": {
+      "tags": [
+        "graphql",
+        "resilience"
+      ]
+    },
+    "gql-caching-definition": {
+      "tags": [
+        "graphql",
+        "state-management",
+        "performance"
+      ]
+    },
+    "gql-tooling-definition": {
+      "tags": [
+        "graphql",
+        "security",
+        "tooling"
+      ]
+    },
+    "gql-vs-rest-definition": {
+      "tags": [
+        "graphql",
+        "api-integration",
+        "http"
+      ]
+    }
+  }
+}
