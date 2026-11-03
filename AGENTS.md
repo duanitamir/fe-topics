@@ -69,3 +69,5 @@ These user-requested instructions apply to the `frontend_topics.html` index and 
 - Application Design Patterns follows Foundations → Code-level patterns → Architecture and evolution → Distributed workflows and recovery → Compare and review. Keep SOLID in one reading card, with each principle immediately followed by its meaning and before/after example, place the common-use lookup near the end, and preserve the grouped secondary outline with short labels and one link per reading card.
 
 - Present this repository as a general engineering reference. Use Frontend Topics branding and the General tech / System design areas; keep prose, README, filenames, navigation, generated indexes and tooling free of recruiting/preparation framing.
+
+- The canonical Git remote for this project is git@github.com:duanitamir/fe-topics.git (origin), owned by the personal duanitamir account. Always use this remote for this repository and keep the repository private. Do not push to the previous work-account repository or enable public publishing without an explicit request. Repository-local SSH configuration selects the personal account key.
