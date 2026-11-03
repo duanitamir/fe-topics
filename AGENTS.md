@@ -1,6 +1,6 @@
-## Engineering notes: editing policy
+## Frontend topics: editing policy
 
-These user-requested instructions apply to the `engineering_notes.html` index and all topic pages in `engineering_notes/` in this project, in this and future sessions.
+These user-requested instructions apply to the `frontend_topics.html` index and all topic pages in `frontend_topics/` in this project, in this and future sessions.
 
 - Read the existing document before editing. Enrich the matching topic or subtopic instead of duplicating explanations. Add a new topic only when no suitable one exists; cross-link related concepts.
 - Use simple, clear explanations with principal-engineer depth: accurate mechanisms, diagnosis, tradeoffs, and practical examples without unnecessary length.
@@ -8,17 +8,17 @@ These user-requested instructions apply to the `engineering_notes.html` index an
 - Keep technical claims and examples accurate, including distinctions between related concepts. Preserve existing content and the established page structure outside the requested scope.
 - Update sidebar navigation for new sections; verify HTML structure, unique IDs, and working fragment targets. Summarize substantive additions and their locations in the final response.
 
-- The notes are now a multi-page site: `engineering_notes.html` is the index; `engineering_notes/*.html` contain individual topics; `engineering_notes/styles.css` is shared styling. Preserve this structure and keep each topic’s content in one canonical page. Update the index, navigation, and cross-page fragment links when adding topics. The index script maps legacy single-page anchors to topic pages; extend that map for any new index-compatible anchors.
+- The notes are now a multi-page site: `frontend_topics.html` is the index; `frontend_topics/*.html` contain individual topics; `frontend_topics/styles.css` is shared styling. Preserve this structure and keep each topic’s content in one canonical page. Update the index, navigation, and cross-page fragment links when adding topics. The index script maps legacy single-page anchors to topic pages; extend that map for any new index-compatible anchors.
 
-- Code snippets must have accurate language classes and visible language labels with offline syntax highlighting. Keep diagrams labeled as diagrams, not code. Shared token styles live in `engineering_notes/syntax.css`; regenerate colored spans with `engineering_notes/tools/highlight_snippets.py` using a Python environment with Pygments (currently `/Users/tduani/.local/pipx/venvs/zalando-cli-bundle/bin/python`). Preserve decoded snippet text when highlighting, and classify any new snippet languages accurately in the generator.
+- Code snippets must have accurate language classes and visible language labels with offline syntax highlighting. Keep diagrams labeled as diagrams, not code. Shared token styles live in `frontend_topics/syntax.css`; regenerate colored spans with `frontend_topics/tools/highlight_snippets.py` using a Python environment with Pygments (currently `/Users/tduani/.local/pipx/venvs/zalando-cli-bundle/bin/python`). Preserve decoded snippet text when highlighting, and classify any new snippet languages accurately in the generator.
 
 - Connect related concepts with contextual cross-references at the point of use, targeting the precise section or paragraph (add descriptive IDs when necessary). Explain why a linked concept matters; preserve one canonical explanation instead of repeating it. Add return references when useful, validate all cross-page targets, and retain index compatibility mappings for new anchors.
 
 - React Hooks entries use a consistent study structure: Purpose; When to use; Example with explanation; When not to use & alternatives; Benefits & tradeoffs; Pitfalls & guarantees; Related concepts. Keep each hook individually anchored and listed in the hook index. Preserve category anchors and distinguish limitations/tradeoffs from implementation mistakes.
 
-- Offline full-text search is available from every page via `search.html`, `search.js`, and the generated `search-index.js`. After content edits, run syntax highlighting first, then `python3 engineering_notes/tools/build_search_index.py` to refresh searchable passages and generated deep-link IDs. Never hand-edit the generated index. Keep search results inclusive of all topic text and code, with direct passage links, and validate index targets after rebuilding.
+- Offline full-text search is available from every page via `search.html`, `search.js`, and the generated `search-index.js`. After content edits, run syntax highlighting first, then `python3 frontend_topics/tools/build_search_index.py` to refresh searchable passages and generated deep-link IDs. Never hand-edit the generated index. Keep search results inclusive of all topic text and code, with direct passage links, and validate index targets after rebuilding.
 
-- The learning path is grouped as Language foundations → Browser foundations → React application design → API implementation → Production quality, recorded in `engineering_notes/topics.json`. Keep topic navigation, index groups, and previous/next links in that order. Within a page, introduce mental models before implementation, place tradeoffs next to their mechanism, and put review at the end. Use h1 for the page title, h2 for main sections, h3 for subsections (h4 within structured hook entries). Each topic has a collapsible On this page outline. Preserve existing authored and generated IDs during moves; the syntax/search rebuild tools now retain deep-link IDs.
+- The learning path is grouped as Language foundations → Browser foundations → React application design → API implementation → Production quality, recorded in `frontend_topics/topics.json`. Keep topic navigation, index groups, and previous/next links in that order. Within a page, introduce mental models before implementation, place tradeoffs next to their mechanism, and put review at the end. Use h1 for the page title, h2 for main sections, h3 for subsections (h4 within structured hook entries). Each topic has a collapsible On this page outline. Preserve existing authored and generated IDs during moves; the syntax/search rebuild tools now retain deep-link IDs.
 
 - Preserve the user’s preferred sidebar behavior: on every topic page, show ordered subtopic links in the dedicated On this page secondary sidebar. The primary sidebar contains topic links only (this supersedes the earlier inline-subtopics preference). Keep these links synchronized with the page outline after any reorganization; retain the grouped learning path and mobile Browse topics control.
 
@@ -32,7 +32,7 @@ These user-requested instructions apply to the `engineering_notes.html` index an
 
 - On wide screens (1200px+), On this page lives in a sticky secondary sidebar to the left of the reading cards, between the primary topic navigation and content. At narrower widths it becomes an expandable outline above the cards. Keep a single outline DOM with existing passage IDs, active/read progress, and no duplicate subsection list in the primary topic sidebar.
 
-- Passage tags use the controlled vocabulary and explicit paragraph/h3-to-tags mapping in `engineering_notes/tags.json` (one to three tags at the precise explanation). Run `tools/build_tags.py` after editing tags or tagged prose/headings, then syntax highlighting when code changed, then `tools/build_search_index.py`. The tag builder generates passage tag links, the offline `tags.html` browser, and its navigation links; do not hand-edit generated passage tags/results. Tag browsing is passage-level and separate from passage search; exclude `tags.html` from the search index. Preserve sidebar scrollspy and the single On this page outline.
+- Passage tags use the controlled vocabulary and explicit paragraph/h3-to-tags mapping in `frontend_topics/tags.json` (one to three tags at the precise explanation). Run `tools/build_tags.py` after editing tags or tagged prose/headings, then syntax highlighting when code changed, then `tools/build_search_index.py`. The tag builder generates passage tag links, the offline `tags.html` browser, and its navigation links; do not hand-edit generated passage tags/results. Tag browsing is passage-level and separate from passage search; exclude `tags.html` from the search index. Preserve sidebar scrollspy and the single On this page outline.
 
 - Tags belong at the specific definition, mechanism, or h3 subsection, not every h2/card header. Preserve exact passage deep links in tag results; do not infer that every concept in a broad card shares its tags. Use `tags.json` passages as the explicit source of truth.
 
@@ -44,9 +44,9 @@ These user-requested instructions apply to the `engineering_notes.html` index an
 
 - General tech and Browse by tag now belong in `.header-links` in the sticky header, not the topic sidebar. Preserve the `<!-- header-links -->` insertion marker used by the tag generator. Primary sidebar contains topic chapters only.
 
-- Keep the primary sidebar focused on topic navigation: do not restore the Engineering Notes brand title or Concepts, examples, and design discussion answers description.
+- Keep the primary sidebar focused on topic navigation: do not restore the Frontend Topics brand title or Concepts, examples, and design discussion answers description.
 
-- Project root: `the repository root`. Open `engineering_notes.html` as the entry point. Historical snapshots are in `backups/`; edit the active guide only.
+- Project root: `the repository root`. Open `frontend_topics.html` as the entry point. Historical snapshots are in `backups/`; edit the active guide only.
 
 - Node.js runtime has its own API implementation page; reference the existing browser event-loop foundation rather than duplicating it. Routing & Navigation follows application patterns and references canonical URL-state ownership. JavaScript mechanics owns property descriptors, coercion, iteration protocols, and module evaluation; TypeScript owns variance, overloads, type transformations, and reusable component typing.
 
@@ -68,4 +68,4 @@ These user-requested instructions apply to the `engineering_notes.html` index an
 
 - Application Design Patterns follows Foundations → Code-level patterns → Architecture and evolution → Distributed workflows and recovery → Compare and review. Keep SOLID in one reading card, with each principle immediately followed by its meaning and before/after example, place the common-use lookup near the end, and preserve the grouped secondary outline with short labels and one link per reading card.
 
-- Present this repository as a general engineering reference. Use Engineering Notes branding and the General tech / System design areas; keep prose, README, filenames, navigation, generated indexes and tooling free of recruiting/preparation framing.
+- Present this repository as a general engineering reference. Use Frontend Topics branding and the General tech / System design areas; keep prose, README, filenames, navigation, generated indexes and tooling free of recruiting/preparation framing.

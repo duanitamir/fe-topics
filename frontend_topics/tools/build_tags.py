@@ -54,14 +54,14 @@ results='<ol class="tag-results" data-tag-results aria-label="Tagged explanation
 for x in records:
  results+='<li data-passage-tags="'+' '.join(x['tags'])+'" data-topic="'+escape(x['topic'],quote=True)+'"><p class="search-result-meta">'+escape(x['topic'])+'</p><h2><a href="'+x['page']+'#'+x['anchor']+'">'+escape(x['title'])+'</a></h2><p>'+escape(x['excerpt'])+'</p>'+chips(x['tags'])+'</li>'
 results+='</ol>'
-body='<main id="page-start"><p class="breadcrumb"><a href="../engineering_notes.html">All topics</a></p><header><h1>Browse by tag</h1><p class="lead">Follow a concept across topics. Choose a tag to find related explanations and subsections.</p></header>'+filters+'<p class="search-status" data-tag-status role="status" aria-live="polite">'+str(len(records))+' explanations across '+str(len(topics))+' topics.</p>'+results+'<noscript><p>All explanations are listed below the tags. Enable JavaScript to filter by tag.</p></noscript></main>'
+body='<main id="page-start"><p class="breadcrumb"><a href="../frontend_topics.html">All topics</a></p><header><h1>Browse by tag</h1><p class="lead">Follow a concept across topics. Choose a tag to find related explanations and subsections.</p></header>'+filters+'<p class="search-status" data-tag-status role="status" aria-live="polite">'+str(len(records))+' explanations across '+str(len(topics))+' topics.</p>'+results+'<noscript><p>All explanations are listed below the tags. Enable JavaScript to filter by tag.</p></noscript></main>'
 shell=re.sub(r'<main\b[^>]*>.*?</main>',lambda m:body,shell,flags=re.S).replace('<script src="search-index.js" defer></script>','<script src="tags.js" defer></script>')
 shell=shell.replace('data-header-topic>Search your notes</a>', 'data-header-topic>Browse by tag</a>')
 (ROOT/'tags.html').write_text(shell)
 # Keep tag browsing reachable from every topic, search, index, and the tag browser itself.
-for p in [*ROOT.glob('*.html'),ROOT.parent/'engineering_notes.html']:
+for p in [*ROOT.glob('*.html'),ROOT.parent/'frontend_topics.html']:
  s=p.read_text();s=re.sub(r'<a[^>]*data-browse-tags[^>]*>Browse by tag</a>','',s)
- prefix='engineering_notes/' if p.parent==ROOT.parent else ''
+ prefix='frontend_topics/' if p.parent==ROOT.parent else ''
  link='<a href="'+prefix+'tags.html" data-browse-tags'+(' aria-current="page"' if p.name=='tags.html' else '')+'>Browse by tag</a>'
  s=s.replace('</nav><!-- header-links -->',link+'</nav><!-- header-links -->',1)
  p.write_text(s)
