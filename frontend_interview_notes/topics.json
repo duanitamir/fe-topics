@@ -53,7 +53,7 @@
       {
         "file": "react-rendering.html",
         "title": "React Rendering",
-        "summary": "Start with how React computes and commits updates, preserves identity, and schedules work. Then follow initial HTML delivery, hydration, Server Components, and streaming."
+        "summary": "Update cycle, Server and Client Components, execution boundaries, CSR/SSR, hydration, streaming and recovery."
       },
       {
         "file": "react-hooks.html",
@@ -121,6 +121,33 @@
         "file": "web-security.html",
         "title": "Web Security & Authentication",
         "summary": "Establish identity and resource permissions, manage sessions and credentials, then examine browser vulnerabilities and API defenses."
+      }
+    ]
+  },
+  {
+    "group": "System design",
+    "area": "system-design",
+    "description": "Architecture preparation through structured, worked case studies.",
+    "topics": [
+      {
+        "file": "system-design.html",
+        "title": "System Design Preparation",
+        "summary": "Interview method, requirements, estimates, component roles, and practice prompts."
+      },
+      {
+        "file": "system-design-chat.html",
+        "title": "Case Study: Chat Web App",
+        "summary": "Requirements, scale, contracts, persistence, live delivery, ordering, recovery, and frontend behavior."
+      },
+      {
+        "file": "system-design-autocomplete.html",
+        "title": "Case Study: Reusable Autocomplete",
+        "summary": "Agnostic core, typed API, async races, combobox accessibility, consumer integration, directories and packaging."
+      },
+      {
+        "file": "system-design-jobs.html",
+        "title": "Case Study: Dynamic Job Discovery",
+        "summary": "Hierarchical categories, facet count semantics, coordinated snapshots, search indexes, URL state and indexing consistency."
       }
     ]
   }

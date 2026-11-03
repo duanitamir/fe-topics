@@ -106,18 +106,6 @@
         "rendering"
       ]
     },
-    "search-1eaae7bfbaa2": {
-      "tags": [
-        "react",
-        "api-integration"
-      ]
-    },
-    "search-f5a8b68851d2": {
-      "tags": [
-        "react",
-        "browser"
-      ]
-    },
     "state-message-parts": {
       "tags": [
         "state-management",
@@ -1106,6 +1094,522 @@
       "tags": [
         "browser",
         "architecture"
+      ]
+    },
+    "lease-definition": {
+      "tags": [
+        "design-pattern",
+        "concurrency",
+        "resource-lifecycle"
+      ]
+    },
+    "sweeper-definition": {
+      "tags": [
+        "design-pattern",
+        "resilience"
+      ]
+    },
+    "lease-safety-definition": {
+      "tags": [
+        "concurrency",
+        "resilience"
+      ]
+    },
+    "lease-fencing": {
+      "tags": [
+        "design-pattern",
+        "concurrency"
+      ]
+    },
+    "lease-idempotency": {
+      "tags": [
+        "api-integration",
+        "resilience"
+      ]
+    },
+    "sd-start-definition": {
+      "tags": [
+        "architecture"
+      ]
+    },
+    "sd-interview-definition": {
+      "tags": [
+        "architecture"
+      ]
+    },
+    "sd-requirements-definition": {
+      "tags": [
+        "architecture",
+        "resilience"
+      ]
+    },
+    "sd-components-definition": {
+      "tags": [
+        "architecture",
+        "api-integration"
+      ]
+    },
+    "sd-practice-definition": {
+      "tags": [
+        "architecture"
+      ]
+    },
+    "chat-scope-definition": {
+      "tags": [
+        "architecture",
+        "security"
+      ]
+    },
+    "chat-estimates-definition": {
+      "tags": [
+        "architecture",
+        "performance"
+      ]
+    },
+    "chat-contracts-definition": {
+      "tags": [
+        "api-integration",
+        "state-management"
+      ]
+    },
+    "chat-data-definition": {
+      "tags": [
+        "architecture",
+        "storage",
+        "concurrency"
+      ]
+    },
+    "chat-baseline-definition": {
+      "tags": [
+        "architecture",
+        "resilience",
+        "api-integration"
+      ]
+    },
+    "chat-components-definition": {
+      "tags": [
+        "architecture",
+        "resource-lifecycle"
+      ]
+    },
+    "chat-send-definition": {
+      "tags": [
+        "api-integration",
+        "resilience",
+        "state-management"
+      ]
+    },
+    "chat-consistency-definition": {
+      "tags": [
+        "concurrency",
+        "architecture",
+        "resilience"
+      ]
+    },
+    "chat-reconnect-definition": {
+      "tags": [
+        "resilience",
+        "browser",
+        "state-management"
+      ]
+    },
+    "chat-fanout-definition": {
+      "tags": [
+        "architecture",
+        "concurrency",
+        "resilience"
+      ]
+    },
+    "chat-scale-definition": {
+      "tags": [
+        "performance",
+        "storage",
+        "architecture"
+      ]
+    },
+    "chat-failures-definition": {
+      "tags": [
+        "resilience",
+        "performance"
+      ]
+    },
+    "chat-frontend-definition": {
+      "tags": [
+        "react",
+        "state-management",
+        "accessibility"
+      ]
+    },
+    "chat-security-definition": {
+      "tags": [
+        "security",
+        "api-integration"
+      ]
+    },
+    "chat-review-definition": {
+      "tags": [
+        "architecture",
+        "resilience"
+      ]
+    },
+    "sd-ui-ux-definition": {
+      "tags": [
+        "architecture",
+        "react",
+        "accessibility"
+      ]
+    },
+    "sd-rest-definition": {
+      "tags": [
+        "http",
+        "api-integration",
+        "resilience"
+      ]
+    },
+    "sd-architecture-definition": {
+      "tags": [
+        "architecture",
+        "performance",
+        "resilience"
+      ]
+    },
+    "sd-consistency-definition": {
+      "tags": [
+        "concurrency",
+        "architecture",
+        "resilience"
+      ]
+    },
+    "sd-cache-cdn-definition": {
+      "tags": [
+        "storage",
+        "http",
+        "performance"
+      ]
+    },
+    "sd-observability-definition": {
+      "tags": [
+        "resilience",
+        "performance",
+        "architecture"
+      ]
+    },
+    "chat-rest-definition": {
+      "tags": [
+        "http",
+        "api-integration",
+        "resilience"
+      ]
+    },
+    "chat-service-boundaries-definition": {
+      "tags": [
+        "architecture",
+        "performance",
+        "resilience"
+      ]
+    },
+    "chat-cache-policy-definition": {
+      "tags": [
+        "storage",
+        "performance",
+        "state-management"
+      ]
+    },
+    "chat-cdn-definition": {
+      "tags": [
+        "http",
+        "performance",
+        "security"
+      ]
+    },
+    "chat-observe-errors-definition": {
+      "tags": [
+        "resilience",
+        "performance",
+        "api-integration"
+      ]
+    },
+    "chat-fallbacks-definition": {
+      "tags": [
+        "resilience",
+        "architecture",
+        "state-management"
+      ]
+    },
+    "chat-functional-requirements": {
+      "tags": [
+        "architecture"
+      ]
+    },
+    "chat-in-scope": {
+      "tags": [
+        "architecture"
+      ]
+    },
+    "chat-out-of-scope": {
+      "tags": [
+        "architecture"
+      ]
+    },
+    "chat-nonfunctional-requirements": {
+      "tags": [
+        "architecture",
+        "resilience"
+      ]
+    },
+    "state-tool-dimensions-definition": {
+      "tags": [
+        "react",
+        "state-management"
+      ]
+    },
+    "state-library-comparison-definition": {
+      "tags": [
+        "state-management",
+        "react",
+        "architecture"
+      ]
+    },
+    "state-tool-scenarios-definition": {
+      "tags": [
+        "state-management",
+        "design-pattern",
+        "react"
+      ]
+    },
+    "patterns-same-problem-definition": {
+      "tags": [
+        "design-pattern",
+        "architecture"
+      ]
+    },
+    "patterns-checkout-alternatives-definition": {
+      "tags": [
+        "design-pattern",
+        "architecture",
+        "state-management"
+      ]
+    },
+    "ac-requirements-definition": {
+      "tags": [
+        "architecture",
+        "accessibility"
+      ]
+    },
+    "ac-wireframe-definition": {
+      "tags": [
+        "accessibility",
+        "forms"
+      ]
+    },
+    "ac-blueprint-definition": {
+      "tags": [
+        "architecture",
+        "design-pattern",
+        "react"
+      ]
+    },
+    "ac-contract-definition": {
+      "tags": [
+        "typescript",
+        "state-management"
+      ]
+    },
+    "ac-transitions-definition": {
+      "tags": [
+        "state-management",
+        "design-pattern"
+      ]
+    },
+    "ac-async-definition": {
+      "tags": [
+        "concurrency",
+        "api-integration",
+        "performance"
+      ]
+    },
+    "ac-accessibility-definition": {
+      "tags": [
+        "accessibility",
+        "browser"
+      ]
+    },
+    "ac-composition-definition": {
+      "tags": [
+        "react",
+        "design-pattern",
+        "forms"
+      ]
+    },
+    "ac-directories-definition": {
+      "tags": [
+        "architecture",
+        "tooling"
+      ]
+    },
+    "ac-packaging-definition": {
+      "tags": [
+        "tooling",
+        "react",
+        "resource-lifecycle"
+      ]
+    },
+    "ac-performance-definition": {
+      "tags": [
+        "performance",
+        "security",
+        "resilience"
+      ]
+    },
+    "ac-verification-definition": {
+      "tags": [
+        "accessibility",
+        "concurrency",
+        "tooling"
+      ]
+    },
+    "ac-review-definition": {
+      "tags": [
+        "architecture",
+        "design-pattern"
+      ]
+    },
+    "chat-sketches-definition": {
+      "tags": [
+        "architecture",
+        "state-management"
+      ]
+    },
+    "chat-directories-definition": {
+      "tags": [
+        "architecture",
+        "tooling"
+      ]
+    },
+    "chat-component-map-definition": {
+      "tags": [
+        "architecture",
+        "react",
+        "state-management"
+      ]
+    },
+    "ac-component-map-definition": {
+      "tags": [
+        "architecture",
+        "react",
+        "state-management"
+      ]
+    },
+    "jobs-requirements-definition": {
+      "tags": [
+        "architecture"
+      ]
+    },
+    "jobs-counts-definition": {
+      "tags": [
+        "api-integration",
+        "architecture"
+      ]
+    },
+    "jobs-components-definition": {
+      "tags": [
+        "react",
+        "state-management"
+      ]
+    },
+    "jobs-architecture-definition": {
+      "tags": [
+        "architecture",
+        "storage"
+      ]
+    },
+    "jobs-api-definition": {
+      "tags": [
+        "http",
+        "api-integration"
+      ]
+    },
+    "jobs-query-definition": {
+      "tags": [
+        "architecture",
+        "performance"
+      ]
+    },
+    "jobs-operations-definition": {
+      "tags": [
+        "resilience",
+        "performance"
+      ]
+    },
+    "react-client-component-definition": {
+      "tags": [
+        "react",
+        "rendering"
+      ]
+    },
+    "react-server-component-definition": {
+      "tags": [
+        "react",
+        "rendering"
+      ]
+    },
+    "sd-requirements-cheatsheet-definition": {
+      "tags": [
+        "architecture"
+      ]
+    },
+    "patterns-saga-definition": {
+      "tags": [
+        "design-pattern",
+        "architecture",
+        "resilience"
+      ]
+    },
+    "patterns-cqrs-definition": {
+      "tags": [
+        "design-pattern",
+        "architecture"
+      ]
+    },
+    "api-replication-definition": {
+      "tags": [
+        "architecture",
+        "storage",
+        "resilience"
+      ]
+    },
+    "patterns-solid-definition": {
+      "tags": [
+        "architecture"
+      ]
+    },
+    "patterns-dry-definition": {
+      "tags": [
+        "architecture"
+      ]
+    },
+    "security-auth-models-definition": {
+      "tags": [
+        "security",
+        "api-integration"
+      ]
+    },
+    "security-oauth-flow-definition": {
+      "tags": [
+        "security",
+        "api-integration"
+      ]
+    },
+    "security-jwt-flow-definition": {
+      "tags": [
+        "security",
+        "api-integration"
+      ]
+    },
+    "security-login-protection-definition": {
+      "tags": [
+        "security",
+        "api-integration"
       ]
     }
   }

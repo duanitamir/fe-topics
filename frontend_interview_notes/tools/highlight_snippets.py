@@ -45,7 +45,7 @@ for page in sorted(ROOT.glob('*.html')):
         global count
         raw=text_content(match['body'])
         language,label=language_for(page.name,raw)
-        if page.stem in {'javascript-mechanics','async-programming','typescript','http-networking','build-tooling','accessibility','backend-api','graphql','node-runtime','routing-navigation'}:
+        if page.stem in {'javascript-mechanics','async-programming','typescript','http-networking','build-tooling','accessibility','backend-api','graphql','node-runtime','routing-navigation','application-patterns','system-design','system-design-chat','system-design-autocomplete','context-state'}:
             declared=re.search(r'class="language-([^"]+)"', match['code_attrs'])
             assert declared, (page.name, 'Declare each example language')
             language=declared[1]

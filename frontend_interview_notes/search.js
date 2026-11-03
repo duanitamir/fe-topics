@@ -240,3 +240,96 @@
   syncHeight();
   if ('ResizeObserver' in window) new ResizeObserver(syncHeight).observe(header);
 })();
+
+// Internal reading references open an offline preview without losing reading position.
+(() => {
+  const scriptURL = new URL(document.currentScript?.src || 'search.js', location.href);
+  let loading, activeLink, panel;
+  function load() {
+    if (window.NOTES_REFERENCE_PREVIEWS) return Promise.resolve(window.NOTES_REFERENCE_PREVIEWS);
+    if (!loading) loading = new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = new URL('reference-previews.js', scriptURL).href;
+      script.onload = () => resolve(window.NOTES_REFERENCE_PREVIEWS);
+      script.onerror = () => reject(new Error('Preview unavailable'));
+      document.head.append(script);
+    }).catch(error => { loading = null; throw error; });
+    return loading;
+  }
+  function close(restore = false) {
+    if (!panel) return;
+    panel.remove(); panel = null;
+    activeLink?.setAttribute('aria-expanded', 'false');
+    activeLink?.removeAttribute('aria-controls');
+    if (restore && activeLink?.isConnected) activeLink.focus({ preventScroll: true });
+    activeLink = null;
+  }
+  function position() {
+    if (!panel || !activeLink) return;
+    const anchor = activeLink.getBoundingClientRect();
+    const margin = 12, height = panel.offsetHeight, width = panel.offsetWidth;
+    const below = innerHeight - anchor.bottom - margin;
+    const top = below >= height ? anchor.bottom + 10 : Math.max(margin, anchor.top - height - 10);
+    panel.style.left = `${Math.max(margin, Math.min(anchor.left, innerWidth - width - margin))}px`;
+    panel.style.top = `${Math.min(top, Math.max(margin, innerHeight - height - margin))}px`;
+  }
+  const links = [...document.querySelectorAll('.reading-card a[href]')].filter(link => {
+    if (link.closest('.passage-tags')) return false;
+    const url = new URL(link.href);
+    return !!url.hash && url.protocol === location.protocol && url.host === location.host &&
+      url.pathname.startsWith(new URL('.', scriptURL).pathname) && url.pathname.endsWith('.html');
+  });
+  for (const link of links) {
+    link.classList.add('reference-link');
+    link.setAttribute('aria-haspopup', 'dialog');
+    link.setAttribute('aria-expanded', 'false');
+    link.addEventListener('click', async event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
+      event.preventDefault();
+      if (activeLink === link) { close(true); return; }
+      close(); activeLink = link;
+      const url = new URL(link.href);
+      const key = url.pathname.split('/').pop() + '#' + decodeURIComponent(url.hash.slice(1));
+      panel = document.createElement('div'); panel.id = 'reference-preview';
+      panel.className = 'reference-preview'; panel.setAttribute('role', 'dialog');
+      panel.setAttribute('aria-labelledby', 'reference-preview-title');
+      const head = document.createElement('div'); head.className = 'reference-preview-head';
+      const title = document.createElement('h2'); title.id = 'reference-preview-title'; title.textContent = link.textContent.trim();
+      const dismiss = document.createElement('button'); dismiss.type = 'button'; dismiss.className = 'reference-close';
+      dismiss.setAttribute('aria-label', 'Close reference preview'); dismiss.textContent = '×';
+      dismiss.addEventListener('click', () => close(true)); head.append(title, dismiss);
+      const topic = document.createElement('p'); topic.className = 'reference-preview-topic';
+      const body = document.createElement('div'); body.className = 'reference-preview-body';
+      body.setAttribute('aria-live', 'polite'); body.textContent = 'Loading reference…';
+      const jump = document.createElement('a'); jump.className = 'reference-jump'; jump.href = link.href; jump.textContent = 'Go to section →';
+      panel.append(head, topic, body, jump); document.body.append(panel);
+      link.setAttribute('aria-expanded', 'true'); link.setAttribute('aria-controls', panel.id);
+      position(); dismiss.focus({ preventScroll: true });
+      const openedPanel = panel;
+      try {
+        const data = (await load())[key];
+        if (panel !== openedPanel) return;
+        body.replaceChildren();
+        if (data) {
+          title.textContent = data.title; topic.textContent = data.topic;
+          for (const text of data.blocks) { const p = document.createElement('p'); p.textContent = text; body.append(p); }
+        } else body.textContent = 'This reference has no excerpt yet. Open the section to read it.';
+      } catch {
+        if (panel !== openedPanel) return;
+        body.textContent = 'The preview could not load. You can still open the section.';
+      }
+      position();
+    });
+  }
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && panel) { event.preventDefault(); close(true); }
+  });
+  document.addEventListener('pointerdown', event => {
+    if (panel && !panel.contains(event.target) && !activeLink?.contains(event.target)) close();
+  });
+  document.addEventListener('focusin', event => {
+    if (panel && !panel.contains(event.target) && event.target !== activeLink) close();
+  });
+  window.addEventListener('resize', position);
+  window.addEventListener('scroll', () => { if (panel) position(); }, { passive: true });
+})();

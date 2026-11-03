@@ -463,3 +463,78 @@ html { scroll-padding-top:calc(var(--header-height) + 24px); }
 .tag-icon[data-tag-icon="tooling"],
 .tag-icon[data-tag-icon="all"] { color:#586780; }
 @media(forced-colors:active) { .tag-icon[data-tag-icon] { color:LinkText; } }
+
+/* Case-study sketches: labeled architecture layers and static UI wireframes. */
+.architecture-layers { list-style:none; padding:0; margin:0; }
+.architecture-layers > li { margin:0; padding:20px 0; border-top:1px solid #d5dfef; }
+.architecture-layers > li:first-child { border-top:0; padding-top:0; }
+.architecture-layers > li:last-child { padding-bottom:0; }
+.architecture-connection { display:block; color:#425775; font-size:.79rem; font-weight:500; margin-bottom:10px; }
+.architecture-nodes { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr)); gap:12px; }
+.architecture-nodes > div { padding:14px; border:1px solid #c4d2e7; background:#fff; border-radius:8px; min-width:0; }
+.architecture-nodes strong { display:block; font-size:.92rem; line-height:1.4; }
+.architecture-nodes span { display:block; color:#4c5e77; font-size:.84rem; line-height:1.55; margin-top:6px; }
+.directory-tree { list-style:none; padding-left:18px; margin:10px 0; border-left:1px solid #c4d2e7; }
+.directory-sketch > .directory-tree { padding-left:0; border-left:0; }
+.directory-tree li { margin:10px 0; overflow-wrap:anywhere; }
+.directory-tree code { font-size:.8rem; background:#eaf0f9; }
+.directory-tree span { color:#4c5e77; font-size:.83rem; }
+.ui-wireframe { background:#fff; border:1px solid #c4d2e7; border-radius:8px; padding:18px; font-size:.88rem; }
+.wireframe-label { font-weight:650; margin-bottom:10px; }
+.wireframe-input { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; padding:12px; border:1px solid #91a5c4; border-radius:5px; }
+.wireframe-input > span { color:#536680; font-size:.74rem; }
+.wireframe-popup { margin-top:8px; border:1px solid #c4d2e7; border-radius:5px; overflow:hidden; }
+.wireframe-option { padding:12px; border-bottom:1px solid #e1e7f0; }
+.wireframe-option:last-child { border-bottom:0; }
+.wireframe-option strong, .wireframe-option span { display:block; }
+.wireframe-option span { font-size:.76rem; color:#536680; margin-top:3px; }
+.wireframe-option.is-highlighted { background:#eaf0ff; color:#214a9b; }
+.wireframe-option.is-disabled { background:#f6f7f9; color:#59677b; }
+.wireframe-status { color:#536680; font-size:.77rem; line-height:1.55; margin-top:14px; }
+.chat-wireframe { display:grid; grid-template-columns:minmax(120px,1fr) minmax(0,2fr); gap:18px; }
+.wireframe-conversations { border-right:1px solid #d5dfef; padding-right:16px; }
+.wireframe-conversations > strong { display:block; margin-bottom:14px; }
+.wireframe-conversation { min-width:0; }
+.wireframe-message { padding:12px; margin:14px 18px 14px 0; background:#f0f3f9; border-radius:7px; }
+.wireframe-message.is-own { margin-left:18px; margin-right:0; background:#eaf0ff; }
+.wireframe-message span { display:block; font-size:.74rem; color:#536680; margin-top:6px; }
+.wireframe-conversation .wireframe-input { margin-top:16px; }
+@media(max-width:600px) {
+  .chat-wireframe { grid-template-columns:minmax(0,1fr); padding:14px; }
+  .wireframe-conversations { border-right:0; border-bottom:1px solid #d5dfef; padding:0 0 14px; }
+  .directory-tree { padding-left:12px; }
+  .ui-wireframe { padding:14px; }
+}
+@media print { .ui-wireframe, .architecture-nodes > div { break-inside:avoid; } }
+
+/* Connected case-study diagrams retain readable labels inside a local scroll area. */
+.communication-diagram { min-width:0; max-width:100%; }
+.diagram-controls { display:flex; flex-wrap:wrap; align-items:center; gap:8px 18px; font-size:.78rem; }
+.diagram-controls span { color:#536680; }
+.diagram-viewport { width:100%; max-width:100%; overflow-x:auto; border:1px solid #c4d2e7; border-radius:8px; background:#fff; overscroll-behavior-x:contain; }
+.diagram-viewport:focus-visible { outline:3px solid #537bc5; outline-offset:3px; }
+.diagram-viewport svg { display:block; width:100%; min-width:720px; height:auto; }
+@media print { .diagram-viewport { overflow:visible; } .diagram-viewport svg { min-width:0; } .diagram-controls { display:none; } }
+
+/* Contextual references: an anchored, non-modal reading preview. */
+.reading-card a.reference-link { text-decoration-style:dotted; text-underline-offset:4px; }
+.reference-preview { position:fixed; z-index:1000; box-sizing:border-box; width:min(480px,calc(100vw - 24px)); max-height:calc(100dvh - 24px); display:flex; flex-direction:column; padding:22px; background:#fff; color:#17233b; border-radius:14px; box-shadow:0 12px 48px rgba(25,44,78,.23); }
+.reference-preview-head { display:flex; align-items:flex-start; gap:16px; }
+.reference-preview-head h2 { margin:0; font-size:1.08rem; line-height:1.4; flex:1; }
+.reference-close { flex:none; width:36px; height:36px; margin:-6px -6px 0 0; padding:0; border:0; border-radius:7px; background:transparent; color:#465773; font-size:1.5rem; cursor:pointer; }
+.reference-close:hover { background:#edf3ff; color:#214a9b; }
+.reference-preview-topic { margin:6px 0 16px; color:#536680; font-size:.78rem; }
+.reference-preview-body { overflow-wrap:anywhere; overflow-y:auto; overscroll-behavior:contain; min-height:0; font-size:.9rem; line-height:1.65; }
+.reference-preview-body p { margin:0 0 14px; }
+.reference-preview-body p:last-child { margin-bottom:0; }
+.reference-jump { display:block; flex:none; align-self:flex-start; margin-top:18px; padding:9px 12px; border-radius:7px; background:#edf3ff; color:#214a9b; font-size:.85rem; font-weight:600; text-decoration:none; }
+.reference-jump:hover { background:#dfe9ff; }
+.reference-preview :focus-visible { outline:2px solid #2859b5; outline-offset:3px; }
+@media(max-width:600px) { .reference-preview { padding:18px; } .reference-close { width:44px; height:44px; } }
+@media print { .reference-preview { display:none; } }
+
+/* Chapter labels organize the long pattern reference without adding navigation links. */
+.reading-chapter { grid-column:2; margin:38px 0 -10px; color:#465773; font-size:.86rem; font-weight:650; letter-spacing:.01em; }
+.page-toc .pattern-outline-group + .pattern-outline-group { margin-top:22px; }
+.pattern-outline-label { display:block; margin:0 0 8px 10px; color:#536680; font-size:.73rem; font-weight:650; line-height:1.5; }
+@media(max-width:1199px) { .reading-chapter { grid-column:auto; } }
